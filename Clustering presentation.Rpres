@@ -1,0 +1,53 @@
+A simple clustering example
+========================================================
+author: L. Salomon
+date: 23/05/2021
+autosize: true
+transition: fade
+
+
+Introduction
+========================================================
+
+We will show the performance of some clustering method on the USArrests data. We use raw and standardized variables.
+
+<b>Clustering methods:</b>
+
+- Ward
+- Complete Linkage
+- Centroid
+
+<b>Distances:</b>
+
+- Euclidean
+- Maximum
+
+Data
+========================================================
+
+```{r}
+data(USArrests)
+data <- as.matrix(USArrests)
+normalized_func <- function(x){ (x-mean(x))/sd(x) }               
+normalized_data <- sapply(USArrests, "normalized_func")        
+rownames(normalized_data) <- rownames(data) 
+head(USArrests)
+```
+
+Dendogram example
+========================================================
+
+```{r}
+fit<-hclust(dist(normalized_data, method = "euclidean"), method="ward.D")                            
+plot(fit,main= "Dendogram for standardized variables",sub = "Ward method and euclidean distance", xlab = NA, ylab = NA)     
+
+```
+
+Conclusion
+========================================================
+
+- Check the Shiny app: https://lsalomon.shinyapps.io/MyAppDeploy/
+
+- Code and documentation: https://github.com/lsalomon-fc/shiny
+
+- This presentation: Rpubs
