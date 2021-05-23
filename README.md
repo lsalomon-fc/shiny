@@ -1,6 +1,8 @@
 # Brief documentation for the app
 
-See: https://lsalomon.shinyapps.io/MyAppDeploy/
+See app: https://lsalomon.shinyapps.io/MyAppDeploy/
+
+See pitch in Rpubs: https://rpubs.com/lsalomon/773040
 
 The app made a dendogram for the USArrests data. This data is composed by 50 states of USA and 4 variables:
 
