@@ -1,5 +1,7 @@
 # Brief documentation for the app
 
+See: https://lsalomon.shinyapps.io/MyAppDeploy/
+
 The app made a dendogram for the USArrests data. This data is composed by 50 states of USA and 4 variables:
 
 * Murder arrests (per 100,000)
